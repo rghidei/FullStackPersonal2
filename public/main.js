@@ -1,6 +1,14 @@
+// document.getElementById('btn').addEventListener('click', view)
+// function view(){
+//   console.log('hi')
+//   document.getElementById('post').style.display = 'block'
+// }
+
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash-o");
 var thumbDown = document.getElementsByClassName("fa-thumbs-down");
+
+
 
 
 Array.from(thumbUp).forEach(function(element) {

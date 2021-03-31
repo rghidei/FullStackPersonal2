@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="h">
 <head>
     <title>21 Savage Fan Site</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
@@ -36,14 +36,24 @@
 
             </div>
         </div>
-        <div class="col-sm-6">
+        <div id="main" class="col-sm-6">
+          <section id="one">
+          <!-- <h2> </h2> -->
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST" enctype='multipart/form-data'>
+            <input id="name"class="form-control" type="text" name="name" placeholder="name" aria-label="default input example">
+            <div id="fileInput" class="mb-3">
+              <input type="file" name="file" id="file" class="form-control" type="file" id="formFile">
+            </div>
+            <button id="btn" type="submit" value="Upload">Submit</button>
+          </form>
+
+        <% } %>
+          </section>
           <section id="two">
-
-
-          <h3></h3>
-          <ul class="messages">
+          <ul  class="messages">
           <% for(var i=0; i<messages.length; i++) {%>
-            <li class="message">
+            <li  id="post" class="message">
               <span><%= messages[i].name %></span>
               <img src="<%= messages[i].img %>" alt="pic">
               <span class="hide"><%= messages[i].thumbUp %></span>
@@ -57,26 +67,7 @@
           </ul>
           </section>
 
-          <h2> </h2>
-        <% if (user.local.email) { %>
-          <section class="sec">
-
-
-          <form action="/messages" method="POST" enctype='multipart/form-data'>
-            <input id="name"class="form-control" type="text" name="name" placeholder="name" aria-label="default input example">
-
-
-
-            <div id="fileInput" class="mb-3">
-
-              <input type="file" name="file" id="file" class="form-control" type="file" id="formFile">
-            </div>
-            <button type="submit" value="Upload">Submit</button>
-          </form>
-          </section>
-
         </div>
-        <% } %>
 
 </div>
 

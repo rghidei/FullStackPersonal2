@@ -3,20 +3,37 @@ body{
   word-wrap:break-word;
 
 }
+
 img{
   height: 200px;
 }
 .hide{
   display: none;
 }
+#main{
+  /* height: 100vh; */
+  display: grid;
+  /* grid-template-columns: 2fr 1fr; */
+}
 #one{
-  position: absolute;
-  bottom: 200px;
-  left: 160px;
-  width: 25%;
-  padding: 1%;
+  grid-column: 1;
+  grid-row: 1;
+  border: 2px solid white;
   background-color: rgba(255, 255, 255, .5);
+  padding: 5%;
+ text-align: center;
+  border-radius: 30px;
+  margin: 25% 0% 5% 0%;
 
+}
+#post{
+  /* display: none; */
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 5%;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 10%;
 }
 #box{
   position: absolute;
@@ -29,17 +46,21 @@ img{
 #innerBox{
   height: 200px;
   background-color: rgba(255, 255, 255, .5);
+  border: 2px solid white;
+  border-radius: 30px;
 }
 #local{
   font-size: 15px;
   margin-top: 0%;
 }
-.sec{
-  border: 1px solid white;
+#two{
+  /* border: 1px solid white;
   background-color: rgba(255, 255, 255, .5);
   padding: 4%;
   text-align: center;
-  margin-top: 31%;
+  margin-top: 31%; */
+  grid-column: 1;
+  grid-row: 2;
 
 }
 
@@ -57,41 +78,69 @@ button{
 
   display: inline-block;
 }
-#loginBox{
-  border: 1px solid black;
-  position: absolute;
-  bottom: 40px;
-  left: 135px;
-  margin: 0%;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 25%;
-}
-#signBox{
-  border: 1px solid black;
-  position: absolute;
-  bottom: 20px;
-  left: 140px;
-  margin: 0%;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 25%;
-}
+
+
 #index{
   background-image: url('2.png');
   background-repeat: no-repeat;
   background-size: 100% 750px;
 }
+#indexOne{
+  position: absolute;
+  bottom: 120px;
+  left: 240px;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+
 #login{
   background-image: url('4.png');
   background-repeat: no-repeat;
   background-size: 100% 750px;
 }
-#profile{
-  background-image: url('1.png');
-  background-repeat: no-repeat;
-  background-size: 100% 750px;
+#loginBox{
+  position: absolute;
+  bottom: 23px;
+  left: 143px;
+  margin: 0%;
+  width: 25%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: .5% 1%;
 }
+
+
+#profile{
+  /* background-image: url('1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 750px; */
+  background-color: inherit;
+}
+#h {
+  background: url('1.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 #signup{
   background-image: url('3.png');
   background-repeat: no-repeat;
   background-size: 100% 750px;
+}
+#signBox{
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+  margin: 0%;
+  width: 25%;
+  background-color: rgba(255, 255, 255, .5);
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: .5% 1%;
 }
