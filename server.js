@@ -4,7 +4,7 @@
 // get all the tools we need
 var express  = require('express');
 const upload = require('express-fileupload')
-
+require('dotenv').config()
 var app      = express();
 var port     = process.env.PORT || 8080;
 const MongoClient = require('mongodb').MongoClient
@@ -16,13 +16,16 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+const DB_NAME = process.env.DB_NAME
+const DB_URL =process.env.DB_URL+`/${DB_NAME}`
 
-var configDB = require('./config/database.js');
+// delete database.js
+// var configDB = require('./config/database.js');
 
 var db
 
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(DB_URL, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
