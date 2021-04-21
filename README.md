@@ -3,9 +3,9 @@
 
 -I created a website where you can upload pictures of their style. Users can like, dislike or delete their posts.
 
-[Checkout my portfolio to see live app](https://rodasghidei.netlify.app/)
+[Checkout my portfolio to see live app](https://show-your-style.herokuapp.com/)
 
-![Style](public/screenshotStyle.png)
+![Style](public/screenshot.png)
 
 ## How It's Made:
 
