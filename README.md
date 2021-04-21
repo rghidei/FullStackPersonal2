@@ -5,7 +5,7 @@
 
 [Checkout my portfolio to see live app](https://rodasghidei.netlify.app/)
 
-![Style](public/shot2.png)
+![Style](public/screenshotStyle.png)
 
 ## How It's Made:
 
