@@ -27,17 +27,16 @@ module.exports = function(app, passport, db) {
 // message board routes ===============================================================
 
     app.post('/messages', (req, res) => {
+      console.log(req, "rinnie")
       if(req.files){
-        console.log(req.files)
+        // console.log(req.files)
         var file = req.files.file
         var fileName = file.name
-        console.log(fileName)
-
+        // console.log(fileName)
         file.mv('public/uploads/'+fileName, function (err){
           if (err) {
             res.send(err)
           } else {
-
             res.redirect('/profile')
           }
         })
